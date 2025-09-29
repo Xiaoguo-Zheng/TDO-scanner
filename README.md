@@ -1,3 +1,30 @@
+# install Rust   
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh  
+
+# configure  
+source $HOME/.cargo/env
+
+#touch  
+cat > Cargo.toml <<EOF  
+[package]  
+name = "get01mm"  
+version = "0.1.0"  
+edition = "2021"  
+[dependencies]  
+rayon = "1.5"  
+EOF  
+
+#save main.rs in src  
+
+#code structure
+get01mm/
+├── Cargo.toml
+└── src/
+     └── main.rs  
+
+
+
+
 ##Download reference  
 #Mus_musculus reference  
 https://ftp.ensembl.org/pub/release-113/fasta/mus_musculus/dna/Mus_musculus.GRCm39.dna.primary_assembly.fa.gz  
@@ -23,3 +50,6 @@ gffread -w 0.hg38_matureRNA_seq.fa -g Homo_sapiens.GRCh38.dna.primary_assembly.f
   
 ##get all candidate prePAM_20bp from transcripts  
 perl get_all_candidate_PAM_from_reference.pl Homo_sapiens.GRCh38.dna.primary_assembly.fa > Homo_sapiens.GRCh38_all_candidate_PAM.txt  
+
+
+
