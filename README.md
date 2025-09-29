@@ -1,10 +1,10 @@
-# install Rust   
+## install Rust   
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh  
 
-# configure  
+## Configure  
 source $HOME/.cargo/env
 
-#touch  
+##Touch environment  
 cat > Cargo.toml <<EOF  
 [package]  
 name = "get01mm"  
@@ -16,11 +16,11 @@ EOF
 
 #save main.rs in src  
 
-#code structure
-get01mm/
-├── Cargo.toml
-└── src/
-     └── main.rs  
+#code structure  
+get01mm/  
+├── Cargo.toml  
+└── src/  
+     └── main.rs    
 
 
 
