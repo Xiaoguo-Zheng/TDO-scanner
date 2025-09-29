@@ -139,12 +139,14 @@ print $out_fh2 "Sequence\tFrequency\n";
 
 # Output for NNNNNNGANNNN
 foreach my $site (sort keys %ga_sites_6N4N) {
-    print $out_fh1 "$site\t$ga_sites_6N4N{$site}[0]\t$ga_sites_6N4N{$site}[1]\n";
+    #print $out_fh1 "$site\t$ga_sites_6N4N{$site}[0]\t$ga_sites_6N4N{$site}[1]\n";
+	 print $out_fh1 "$site\t$ga_sites_6N4N{$site}[1]\n";
 }
 
 # Output for NNNNNNGANNNNN
 foreach my $site (sort keys %ga_sites_6N5N) {
-    print $out_fh2 "$site\t$ga_sites_6N5N{$site}[0]\t$ga_sites_6N5N{$site}[1]\n";
+    #print $out_fh2 "$site\t$ga_sites_6N5N{$site}[0]\t$ga_sites_6N5N{$site}[1]\n";
+	print $out_fh2 "$site\t$ga_sites_6N5N{$site}[1]\n";
 }
 
 # Close file handles
@@ -162,3 +164,4 @@ sub reverse_complement {
     $seq =~ tr/ACGTacgt/TGCAtgca/;        # Complement the bases
     return $seq;
 }
+
